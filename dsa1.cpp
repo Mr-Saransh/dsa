@@ -1,20 +1,51 @@
 #include<iostream>
 using namespace std;
-void prl(int n)
+void printPattern(int n)
 {
     int i;
-    for(i=1;i<=n;i++){
-        for(int j=1;j<=i;j++){
-            cout<<j;
-        }
-        for(int k=2*n-2*i;k>=1;k--){
-            cout<<" ";
-        }
-        for(int h=i;h>=1;h--){
-            cout<<h;
-        }
+    char ch='A';
+    for(i=0;i<=n;i++)
+    {
+    for(int j=0;j<=i;j++){
+        cout<<char(ch+i);
+    }   
         cout<<endl;
         }
+    }
+
+void printPattern2(int n)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+    for(int j=n;j>i;j--){
+        cout<<"*";}
+    for(int k=0;k<2*i;k++){
+        cout<<" ";
+    }
+    for(int l=n;l>i;l--){
+        cout<<"*";
+
+    }
+    cout<<"\n";
+
+}
+    for(i=0;i<=n;i++){
+    for(int m=0;m<i;m++){
+        cout<<"*";
+    }
+    if(i==0){
+        continue;
+    }else{
+    for(int k=0;k<2*n-2*i;k++){
+        cout<<" ";
+    }}
+    for(int h=0;h<i;h++){
+        cout<<"*";
+    }
+     cout<<"\n";
+    }
+
     }
 
 int main(){
@@ -23,7 +54,7 @@ int main(){
     for(int i=1;i<=t;i++){
         int n;
         cin>>n;
-        prl(n);
+        printPattern2(n);
     }
 
 }
