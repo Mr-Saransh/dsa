@@ -106,13 +106,41 @@ void printPattern4(int n)
     cout<<endl;
 }}
 
+void printPattern5(int n){
+    int i;
+    for(i=0;i<n;i++){
+    for(int j=0;j<n;j++){
+        if(i==0||j==0||j==n-1||i==n-1){
+            cout<<"*";
+        }
+        else{
+        cout<<" ";}
+    }
+    cout<<endl;
+}}
+
+void printPattern6(int n){
+    int i;
+    for(i=0;i<=n-1;i++){
+    for(char ch='A'+n-1-i;ch<='A'+n-1;ch++){
+        cout<<ch;
+    }cout<<endl;}}
+
+void printPattern7(int n){
+    int i;
+    for(i=0;i<2*n-1;i++){
+    for(int j=0;j<2*n-1;j++){
+        int layer=min(min(i,j),min(2*n-2-i,2*n-2-j));  //calculated the minimum distance from the edges to determine the layer value !!!
+        cout<<n-layer;
+    }cout<<endl;}}
+
 int main(){
     int t;
     cin>>t;
     for(int i=1;i<=t;i++){
         int n;
         cin>>n;
-        printPattern4(n);
+        printPattern7(n);
     }
 
 }
