@@ -48,13 +48,50 @@ void printPattern2(int n)
 
     }
 
+void printPattern3(int n)
+{
+    int i;
+    for(i=0;i<=n;i++){
+    for(int m=0;m<i;m++){
+        cout<<"*";
+    }
+    if(i==0){
+        continue;
+    }else{
+    for(int k=0;k<2*n-2*i;k++){
+        cout<<" ";
+    }}
+    for(int h=0;h<i;h++){
+        cout<<"*";
+    }
+     cout<<"\n";
+    }
+
+
+
+    for(i=0;i<n-1;i++)
+    {
+    for(int j=n-1;j>i;j--){
+        cout<<"*";}
+    for(int k=0;k<2*i+2;k++){
+        cout<<" ";
+    }
+    for(int l=n-1;l>i;l--){
+        cout<<"*";
+
+
+    }
+    cout<<"\n";
+
+    }}
+
 int main(){
     int t;
     cin>>t;
     for(int i=1;i<=t;i++){
         int n;
         cin>>n;
-        printPattern2(n);
+        printPattern3(n);
     }
 
 }
