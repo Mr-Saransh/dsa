@@ -49,6 +49,7 @@ void printPattern2(int n)
     }
 
 void printPattern3(int n)
+
 {
     int i;
     for(i=0;i<=n;i++){
@@ -85,13 +86,33 @@ void printPattern3(int n)
 
     }}
 
+void printPattern4(int n)
+{
+    int i;
+    for(i=0;i<=n;i++){
+    for(int m=n-1;m>=i;m--){
+        cout<<"-";}
+    char ch='A';
+    int breakpoint=(2*i+1)/2;
+    for(int j=1;j<=2*i+1;j++){
+        cout<<ch;
+        if(j<=breakpoint){
+            ch++;
+        }else{
+            ch--;}
+}
+    for(int m=n-1;m>=i;m--){
+        cout<<"-";}
+    cout<<endl;
+}}
+
 int main(){
     int t;
     cin>>t;
     for(int i=1;i<=t;i++){
         int n;
         cin>>n;
-        printPattern3(n);
+        printPattern4(n);
     }
 
 }
